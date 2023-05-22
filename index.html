@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavy Project</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.css" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="icon" type="image/x-icon" href="ico.jpg">
+</head>
+<body>
+    <!-- Let's Start -->
+    <!-- Preloader -->
+    
+
+    <div class="preloader"> 
+        <img class="preloader-icon" src="images/loading.png" alt="My Site Preloader">
+     </div>
+    
+    <!-- First Section -->
+    <div class="jm-firstsec">
+
+            <header class="header-area">
+                <div class="container">
+                    <!-- Navbar > (First Section) -->
+                    <nav class="jm-navbar main-font" style="display: flex;">
+                        <div class="jm-navbar-logo">
+                            <a href=""><img src="images/logo.png" alt="logo" style="max-width:200px" title="Home Page"/>
+                            </a>
+                        </div>
+                        <div class="jm-navbar-list" >
+                            <ul class="navbar-ul" id="navbar-ul-js">
+                                <li><a class="main-link" href="#">Home</a></li>
+                                <ul class="respon-dropbtn icons btn-right showLeft" ><a href="#">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul> </a>
+                                
+                                <li><a class="navbar-link" href="#">Shop</a></li>
+                                <li><a class="navbar-link" href="#">Product Details</a></li>
+                                <li><a class="navbar-link" href="#">Contact Us</a></li>
+                                <li><a class="active-link" id="link" href="#">SIGN IN</a></li>
+                            </ul>
+                            
+                        </div>
+                    </nav>
+
+                    <!-- Responsive Navbar -->
+                </div>
+            </header>
+                <!-- Details > (First Section) -->
+            <div class="container">
+                <div class="fs-details">
+                    <div class="fs-left">
+                        <h6>WELCOME TO JEREMYM</h6>
+                        <h1>BEST NARUTO GAMING SITE<br>EVER!</h1>
+                        <p>Jeremy Gaming is free website for your gaming websites,<br> you can download
+                            from the link under here
+                        </p>
+                        <div class="fs-search-input">
+                            <form id="search-form" action="#">
+                                <input type="text" placeholder="Type something here" id="searchText" name="search-input" />
+                                <button class="jm-button search-btn" type="button" onclick="searchArray()">search now</button>
+                            </form>
+                            <div class="search-list">
+                                <p id="usertype"></p>
+                                <a href="">Show List</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fs-right">
+                        <div class="right-image">
+                            <img src="images/naruto.png" alt="naruto" style="max-width:350px" >
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <!--            Features            -->
+        <div class="features">
+            <div class="container">
+                <div class="features-row">
+                    <div class="features-item">
+                        <a href="#">
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="images/featured-01.png" alt="feature"/>
+                                </div>
+                                <h4>Free Storage</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="features-item">
+                        <a href="#">
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="images/featured-02.png" alt="feature"/>
+                                </div>
+                                <h4>User More</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="features-item">
+                        <a href="#">
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="images/featured-03.png" alt="feature"/>
+                                </div>
+                                <h4>Reply Ready</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="features-item">
+                        <a href="#">
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="images/featured-04.png" alt="feature"/>
+                                </div>
+                                <h4>Easy Layout</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+
+        <!--                    Trending                (Second Section )-->
+        <div class="jm-secondsec mg-y">
+            <div class="container">
+                <div class="trending-section">  <!--        Takes Flex      -->
+                    <div class="trending-title">
+                        <p class="section-title">HEROS</p>
+                        <h3 class="section-desc">Trending Heros</h3>
+                    </div>
+                    <div class="trending-btn">
+                        <button class="jm-button">View All</button>
+                    </div>
+                </div>
+
+                <div class="trending-comp">
+                    <div class="trending-item">
+                        <a href="#">
+                            <img src="images/kakashi.png" height="390px"/>
+                            <div class="trending-desc">
+                                <p>Action</p>
+                                <h6>Kakshi Sensei</h6>
+                                <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending-item">
+                        <a href="#">
+                            <img src="images/sasuke.png" height="390px"/>
+                            <div class="trending-desc">
+                                <p>Action</p>
+                                <h6>Sasuke Uchiha</h6>
+                                <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending-item">
+                        <a href="#">
+                            <img src="images/sakura.png" height="390px"/>
+                            <div class="trending-desc">
+                                <p>Action</p>
+                                <h6>Sakura Uchiha</h6>
+                                <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending-item">
+                        <a href="#">
+                            <img src="images/minato.png" height="390px"/>
+                            <div class="trending-desc">
+                                <p>Action</p>
+                                <h6>Minato Namikaze</h6>
+                                <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+</body>
+</html>
