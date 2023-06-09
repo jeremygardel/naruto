@@ -14,6 +14,38 @@ a {
 li {
     list-style: none !important;
 }
+
+
+.ads{
+    width:300px;
+    padding:25px 15px;
+    background-color: #eee;
+    color: black;
+    margin:auto;
+    position:relative;
+    top:-500px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 13%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+    margin:auto;
+}
+.closeads{
+    position:absolute;
+    top:5px;
+    right:5px;
+    cursor:pointer;
+}
+
+.top{
+    font-size:30px;
+    position:fixed;
+    right:20px;
+    bottom:50px;
+    display:none;
+    background-color:black;
+    color:white;
+}
 .video {
     background-color: #F7F3F3;
     padding: 75px 0;
