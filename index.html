@@ -54,15 +54,14 @@
                             
                         </div>
                     </nav>
-
+                <div class="ads" style="display: block;">
+                        <i class="fa-regular fa-circle-xmark closeads"></i>
+\                </div>
                     <!-- Responsive Navbar -->
                 </div>
             </header>
 
-            <div class="ads" style="display: block;">
-                    <i class="fa-regular fa-circle-xmark closeads"></i>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque praesentium nisi architecto sequi ipsum beatae impedit, expedita corporis animi suscipit cum minus ex, repellat amet error cumque, quisquam commodi adipisci?
-            </div>
+
             <!-- Login Page (Absolute)  --> 
 
             <div class="overlay" id="overlayid" style="display: block;" >
@@ -361,30 +360,28 @@
         <script src="js/script.js"></script>
         <script src="js/all.min.js"></script>
         <script>
-            $(document).ready(function (){
-                // animate(css properties , duration , callBackFunction)
+            
+         $('.ads').animate({
+            'top' : '100px'
+        } , 3000 , function (){
+            $(this).delay(3000).animate({
+                'top' : '-600px',
+                
+            },2000);
+        });
 
-                $('.ads').animate({
-                    'top' : '150px'
-                } , 1000 , function (){
-                    $(this).delay(3000).animate({
-                        'top' : '-500px'
-                        
-                    },2000);
-                });
+        $('.closeads').click(function (){
+            $('.ads').hide();
+        });
 
-                $('.closeads').click(function (){
-                    $('.ads').hide();
-                });
+        $(window).scroll(function (){
+            if($(window).scrollTop() > 400 ){
+                $('.top').fadeIn();
+            }else{
+                $('.top').fadeOut();
+            }
+        });
 
-                $(window).scroll(function (){
-                    if($(window).scrollTop() > 400 ){
-                        $('.top').fadeIn();
-                    }else{
-                        $('.top').fadeOut();
-                    }
-                });
-            });
         </script>
 </body>
 </html>
