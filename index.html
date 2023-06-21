@@ -54,12 +54,13 @@
                             
                         </div>
                     </nav>
-                <div class="ads" style="display: block;">
-                        <i class="fa-regular fa-circle-xmark closeads"></i>
-\                </div>
+                    <div id="adsid" class="ads" style="display: block;">
+                        <i id="closeadsid" class="fa-regular fa-circle-xmark closeads" onclick="closeads()"></i>
+                   </div>
                     <!-- Responsive Navbar -->
                 </div>
             </header>
+
 
 
             <!-- Login Page (Absolute)  --> 
@@ -175,9 +176,9 @@
                 </div>
 
                 <div class="trending-comp"> <!--        Takes Flex      -->
-                    <div class="trending-item">
+                    <div class="trending-item" onclick="heros()">
                         <a href="#">
-                            <img src="images/kakashi.png" height="390px"/>
+                            <img class="heros" src="images/kakashi.png" height="390px"/>
                             <div class="trending-desc">
                                 <p>Action</p>
                                 <h6>Kakshi Sensei</h6>
@@ -185,9 +186,9 @@
                             </div>
                         </a>
                     </div>
-                    <div class="trending-item">
+                    <div class="trending-item" onclick="heros()">
                         <a href="#">
-                            <img src="images/sasuke.png" height="390px"/>
+                            <img class="heros" src="images/sasuke.png" height="390px"/>
                             <div class="trending-desc">
                                 <p>Action</p>
                                 <h6>Sasuke Uchiha</h6>
@@ -195,9 +196,9 @@
                             </div>
                         </a>
                     </div>
-                    <div class="trending-item">
+                    <div class="trending-item" onclick="heros()">
                         <a href="#">
-                            <img src="images/sakura.png" height="390px"/>
+                            <img class="heros" src="images/sakura.png" height="390px"/>
                             <div class="trending-desc">
                                 <p>Action</p>
                                 <h6>Sakura Uchiha</h6>
@@ -205,9 +206,9 @@
                             </div>
                         </a>
                     </div>
-                    <div class="trending-item">
+                    <div class="trending-item" onclick="heros()">
                         <a href="#">
-                            <img src="images/minato.png" height="390px"/>
+                            <img class="heros" src="images/minato.png" height="390px"/>
                             <div class="trending-desc">
                                 <p>Action</p>
                                 <h6>Minato Namikaze</h6>
@@ -362,7 +363,7 @@
         <script>
             
          $('.ads').animate({
-            'top' : '100px'
+            'top' : '70px'
         } , 3000 , function (){
             $(this).delay(3000).animate({
                 'top' : '-600px',
@@ -370,9 +371,6 @@
             },2000);
         });
 
-        $('.closeads').click(function (){
-            $('.ads').hide();
-        });
 
         $(window).scroll(function (){
             if($(window).scrollTop() > 400 ){

@@ -88,7 +88,15 @@ function login() {
     }
 
  }
+//  Heros
 
+//  Close Ads
+let aDs = document.getElementById("adsid");
+let closeAds = document.getElementById("closeadsid");
+function closeads() {
+    closeAds.style.display = "none";
+    aDs.style.display = "none";
+}
 
 
 

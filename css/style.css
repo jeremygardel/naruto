@@ -39,6 +39,8 @@ li {
     top:5px;
     right:5px;
     cursor:pointer;
+    z-index: 0;
+
 }
 
 .top{
@@ -89,7 +91,7 @@ li {
 }
 .overlay {
         position: fixed;
-        z-index: 3;
+        z-index: 50;
         padding-top: 100px;
         position: fixed;
         left: 0;
