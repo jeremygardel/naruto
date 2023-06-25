@@ -46,11 +46,17 @@ li {
 .top{
     font-size:30px;
     position:fixed;
-    right:20px;
+    right:25px;
     bottom:50px;
     display:none;
-    background-color:black;
+    background-color: lightgrey;
     color:white;
+    transition-duration: 0.3s;
+    z-index: 150;
+}
+.top:hover {
+    cursor: pointer;
+    background-color: white;
 }
 .video {
     background-color: #F7F3F3;
@@ -428,6 +434,7 @@ li {
 .fs-details {
     display: flex;
     justify-content: space-between;
+    z-index: 50;
 }
 
 /*          Screen Media Query      */
