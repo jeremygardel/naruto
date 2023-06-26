@@ -48,6 +48,16 @@ $(document).ready(function () {
         $('.overlay').fadeIn(1000);
         $('.login-page').fadeIn(1000);
     });
+    $(window).scroll(function (){
+        if($(window).scrollTop() > 400 ){
+            $('.top').fadeIn();
+        }else{
+            $('.top').fadeOut();
+        }
+    });
+    $('.totop').click(function() {
+        $(window).scrollTop(0);
+    });
 });
 $(document).ready(function () {
     $('#popexit').click(function() {
@@ -55,6 +65,7 @@ $(document).ready(function () {
         $('.login-page').fadeOut(1000);
     });
 });
+
 
 
 function exitLogin() {

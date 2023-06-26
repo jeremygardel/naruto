@@ -25,94 +25,8 @@
         <img class="preloader-icon" src="images/loading.png" alt="My Site Preloader">
      </div>
 
+     <?php include 'homepage.php';?>
 
-    <!-- First Section -->
-    <div class="jm-firstsec">
-
-            <header class="header-area">
-                <div class="container">
-                    <!-- Navbar > (First Section) -->
-                    <nav class="jm-navbar main-font" style="display: flex;">
-                        <div class="jm-navbar-logo">
-                            <a href=""><img src="images/logo.png" alt="logo" style="max-width:200px" title="Home Page"/>
-                            </a>
-                        </div>
-                        <div class="jm-navbar-list" >
-                            <ul class="navbar-ul" id="navbar-ul-js">
-                                <li><a class="main-link" href="#">Home</a></li>
-                                <ul class="respon-dropbtn icons btn-right showLeft" ><a href="#">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul> </a>
-                                
-                                <li><a class="navbar-link" href="#">Shop</a></li>
-                                <li><a class="navbar-link" href="#">Product Details</a></li>
-                                <li><a class="navbar-link" href="#">Contact Us</a></li>
-                                <li><a class="active-link" id="link" href="#">SIGN IN</a></li>
-                            </ul>
-                            
-                        </div>
-                    </nav>
-                    <div id="adsid" class="ads" style="display: block;">
-                        <i id="closeadsid" class="fa-regular fa-circle-xmark closeads" onclick="closeads()"></i>
-                   </div>
-                    <!-- Responsive Navbar -->
-                </div>
-            </header>
-
-
-
-            <!-- Login Page (Absolute)  --> 
-
-            <div class="overlay" id="overlayid" style="display: block;" >
-                <div class="login-page" id="loginid" style="display: block;">
-                    <a class="pop-exit" id="popexit" ><i class="fa fa-times"></i></a>
-                    <a href=""><img src="images/logo.png" alt="logo" style="max-width:200px" title="Home Page"/></a>
-                    <h4>LOGIN</h4> 
-                    <p><i class="fa fa-android w3-large"></i><i class="fa fa-apple w3-large"></i><i class="fa fa-windows w3-large"></i></p>
-                    <form>
-                        <input class="login-email" id="loginemail" type="email" name="ename" placeholder="Enter your E-mail Addreas" required>
-                        <input class="login-password" id="loginpassword" type="password" name="pass" placeholder="Enter your password" required>
-                        <button class="btn-login jm-button " id="btnlogin" type="button" onclick="login()">Login</button>
-                    </form>
-    
-                    <p>© 2017–2022</p>
-                </div>
-            </div>
-            
-                <!-- Details > (First Section) -->
-            <div class="container">
-                <div class="fs-details">
-                    <div class="fs-left">
-                        <h6>WELCOME TO JEREMYM</h6>
-                        <h1>BEST NARUTO GAMING SITE<br>EVER!</h1>
-                        <p>Jeremy Gaming is free website for your gaming websites,<br> you can download
-                            from the link under here
-                        </p>
-                        <div class="fs-search-input">
-                            <form id="search-form" action="#">
-                                <input type="text" class="jm-input" placeholder="Type something here" id="searchText" name="search-input" />
-                                <button class="jm-button search-btn" type="button" onclick="searchArray()">search now</button>
-                            </form>
-                            <div class="search-list">
-                                <p id="usertype"></p>
-                                <a href="">Show List</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="fs-right">
-                        <div class="right-image">
-                            <img src="images/naruto.png" alt="naruto" style="max-width:350px" >
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div> 
-    
-    
         <!--            Features            -->
         <div class="features">
             <div class="container">
@@ -360,25 +274,21 @@
         <script src="js/jquery.js"></script>
         <script src="js/script.js"></script>
         <script src="js/all.min.js"></script>
+
         <script>
             
          $('.ads').animate({
-            'top' : '70px'
+            'top' : '30px'
         } , 3000 , function (){
             $(this).delay(3000).animate({
                 'top' : '-600px',
+               
                 
-            },2000);
+            },3000);
         });
 
 
-        $(window).scroll(function (){
-            if($(window).scrollTop() > 400 ){
-                $('.top').fadeIn();
-            }else{
-                $('.top').fadeOut();
-            }
-        });
+
 
         </script>
 </body>

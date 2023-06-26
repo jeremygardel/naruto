@@ -46,11 +46,17 @@ li {
 .top{
     font-size:30px;
     position:fixed;
-    right:20px;
+    right:25px;
     bottom:50px;
     display:none;
-    background-color:black;
+    background-color: lightgrey;
     color:white;
+    transition-duration: 0.3s;
+    z-index: 150;
+}
+.top:hover {
+    cursor: pointer;
+    background-color: white;
 }
 .video {
     background-color: #F7F3F3;
@@ -277,6 +283,17 @@ li {
 
 /*                          First Section                               */
 /*                               Nav-bar (First Section)                 */
+.contact-page {
+    background-image: url(banner.jpg);
+    border-radius: 0px 0px 150px 150px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0px;
+    color: white;
+    width: 100%;
+}
+
 .jm-firstsec {
     background-image: url(banner.jpg);
     border-radius: 0px 0px 150px 150px;
@@ -288,6 +305,7 @@ li {
     width: 100%;
 
 }
+
 .header-area {
     position: absolute;
     background-color: transparent;
@@ -428,6 +446,7 @@ li {
 .fs-details {
     display: flex;
     justify-content: space-between;
+    z-index: 50;
 }
 
 /*          Screen Media Query      */
