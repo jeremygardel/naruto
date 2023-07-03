@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heavy Project</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/bootstrap.css" />
-    <link rel="stylesheet" href="CSS/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
     <link rel="icon" type="image/x-icon" href="ico.jpg">
@@ -55,12 +55,16 @@
                             
                         </div>
                     </nav>
-                    <div id="adsid" class="ads" style="display: block;">
-                        <i id="closeadsid" class="fa-regular fa-circle-xmark closeads" onclick="closeads()"></i>
-                   </div>
-                    <!-- Responsive Navbar -->
+
                 </div>
             </header>
+
+
+            <!--  Adverts -->
+            <div class="adss">
+                <img src="images/gallery3.jpg" width="500px" height="300px" />
+            </div>
+
 
 
 
@@ -76,6 +80,7 @@
                         <input class="login-email" id="loginemail" type="email" name="ename" placeholder="Enter your E-mail Addreas" required>
                         <input class="login-password" id="loginpassword" type="password" name="pass" placeholder="Enter your password" required>
                         <button class="btn-login jm-button " id="btnlogin" type="button" onclick="login()">Login</button>
+                        <a href="register.php">Register</a>
                     </form>
     
                     <p>© 2017–2022</p>
@@ -113,6 +118,9 @@
             </div>
         </div> 
     
+        <div class="adsz">
+                <img src="images/gallery2.jpg" width="500px" height="300px" />
+            </div>
     
         <!--            Features            -->
         <div class="features">
@@ -357,26 +365,19 @@
             </div>
             
         </footer>
-
+    <div class="top">
+        <a href="#"><img src="images/free-chevron-small-up-1859441-1577837.png" width="50px" /></a>
+</div>
         <script src="js/jquery.js"></script>
-        <script src="js/script.js"></script>
         <script src="js/all.min.js"></script>
-
-        <script>
-            
-         $('.ads').animate({
-            'top' : '30px'
-        } , 3000 , function (){
-            $(this).delay(3000).animate({
-                'top' : '-600px',
-               
-                
-            },3000);
-        });
-
-
-
-
-        </script>
+        <script src="js/script.js"></script>
+<!-- <script>
+    $(document).ready(function () {
+        $('.adss').animate({
+        'top':'0'
+         },1000, function(){});
+    });
+</script> -->
+      
 </body>
 </html>

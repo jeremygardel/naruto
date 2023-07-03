@@ -1,3 +1,43 @@
+$(document).ready(function () {
+
+  
+    $(".adsz").animate({
+        'top': '300px'
+
+    },2000)
+
+
+    
+    $('.overlay').hide();
+    $('.login-page').hide();
+    $('#link').click(function () {
+        $('.overlay').fadeIn(1000);
+        $('.login-page').fadeIn(1000);
+    });
+    $(window).scroll(function (){
+        if($(window).scrollTop() > 700 ){
+            $('.top').fadeIn();
+        }else{
+            $('.top').fadeOut();
+        }
+    });
+    $('.top').click(function() {
+        $(window).scrollTop(0);
+    });
+
+    $('#popexit').click(function() {
+        $('.overlay').fadeOut(1000);
+        $('.login-page').fadeOut(1000);
+    });
+
+  
+
+});
+
+
+
+
+
 // JS
 // OnLoad
 window.onload = function(){ document.querySelector(".preloader").style.display = "none"; }
@@ -30,6 +70,11 @@ function searchArray() {
     }
 }
 
+
+// Register Testinput
+
+
+
 //      Login Page Pop Up
 
 let overlay = document.getElementById("overlayid");
@@ -41,30 +86,6 @@ let email = document.getElementById("loginemail");
 let password = document.getElementById("loginpassword");
 
 
-$(document).ready(function () {
-    $('.overlay').hide();
-    $('.login-page').hide();
-    $('#link').click(function () {
-        $('.overlay').fadeIn(1000);
-        $('.login-page').fadeIn(1000);
-    });
-    $(window).scroll(function (){
-        if($(window).scrollTop() > 400 ){
-            $('.top').fadeIn();
-        }else{
-            $('.top').fadeOut();
-        }
-    });
-    $('.totop').click(function() {
-        $(window).scrollTop(0);
-    });
-});
-$(document).ready(function () {
-    $('#popexit').click(function() {
-        $('.overlay').fadeOut(1000);
-        $('.login-page').fadeOut(1000);
-    });
-});
 
 
 
