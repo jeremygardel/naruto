@@ -35,7 +35,7 @@
                             
                             <li><a class="navbar-link" href="#">Shop</a></li>
                             <li><a class="navbar-link" href="#">Product Details</a></li>
-                            <li><a class="navbar-link" href="contact.php">Contact Us</a></li>
+                            <li><a class="navbar-link" id="contact" href="#">Contact Us</a></li>
                             <li><a class="active-link" id="link" href="#">SIGN IN</a></li>
                         </ul>
                         
@@ -62,8 +62,92 @@
     </div>
 
 
+<!--            php contact -->
+    <?php
+// define variables and set to empty values
+    $emailErr = $messageErr = "";
+    $email = $message = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["email"])) {
+          $emailErr = "Email is required";
+        } else {
+          $email = contact_input($_POST["email"]);
+        }
+      
+        if (empty($_POST["message"])) {
+          $messageErr = "Your message is required";
+        } else {
+          $message = contact_input($_POST["message"]);
+        }
+    }
+    function contact_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    ?>
+                        <!--        Contact us       -->
+
+         <div class="overlay-contact" style="display: block;">
+                <div class="contact-pop" style="display: block;">
+                        <a class="contact-exit" id="contactexit" ><i class="fa fa-times"></i></a>
+                        <a href=""><img src="images/logo.png" alt="logo" style="max-width:200px" title="Home Page"/></a>
+                        <h4>Contact us</h4> 
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                        <div class="mb-3 contact-email">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter the Email" name="email" >
+                            <span class="error"> <?php echo $emailErr;?></span>
+
+                        </div>
+                        <div class="mb-3 contact-textarea">
+                            <label for="exampleFormControlTextarea1" class="form-label">Your message</label>
+                            <textarea class="form-control form-text" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+                            <span class="error"> <?php echo $messageErr;?></span>
+
+                        </div>
+                        <button class="jm-button" type="submit" name="contact-btn" >Contact</button>
+
+                    </form>
+                    <?php
+                        echo "<h2>Your Input:</h2>";
+                        echo $email;
+                        echo "<br>";
+                        echo $message;
+                        echo "<br>";
+                    ?>
+                </div>
+         </div>
+
         <script src="js/jquery.js"></script>
         <script src="js/script.js"></script>
         <script src="js/all.min.js"></script>
+        <?php
+class Fruit {
+    // Properties
+    public $name;
+    public $color;
+
+    // Methods
+    function set_name($name) {
+        $this->name = $name;
+    }
+    function get_name() {
+        return $this->name;
+    }
+    }
+
+    $apple = new Fruit();
+    $banana = new Fruit();
+    $apple->set_name('Apple');
+    $banana->set_name('Banana');
+
+    echo $apple->get_name();
+    echo "<br>";
+    echo $banana->get_name();
+?>
 </body>
 </html>

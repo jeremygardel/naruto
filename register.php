@@ -66,16 +66,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p class="label-form">Registeration</p>
             <a href=""><img src="images/logo.png" alt="logo" style="max-width:200px" title="Home Page"/></a>
             <input class="reg-input reg-name" type="text" name="reg-name" placeholder="Your Username" >
-            <span class="error">* <?php echo $nameErr;?></span>
+            <span class="error"> <?php echo $nameErr;?></span>
             <br><br>
             <input class="reg-input reg-email" type="email" name="reg-email" placeholder="Your Email" >
-            <span class="error">* <?php echo $emailErr;?></span>
+            <span class="error"> <?php echo $emailErr;?></span>
             <br><br>
             <input class="reg-input reg-pass" type="password" name="reg-pass" placeholder="Your Password" >
-            <span class="error">* <?php echo $passwordErr;?></span>
+            <span class="error"> <?php echo $passwordErr;?></span>
              <br><br>
             <input class="reg-input reg-confirm" type="password" name="reg-confirm" placeholder="Confirm Password">
-            <span class="error">* <?php echo $confirmErr;?></span>
+            <span class="error"> <?php echo $confirmErr;?></span>
              <br><br>
             <button class="btn-register jm-button " id="btn-reg" type="submit" name="reg-btn" >Register</button>
             <p class="label-form">Already in?<a href="register.php"> Sign in</a></p>
