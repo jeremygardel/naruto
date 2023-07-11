@@ -125,29 +125,39 @@
         <script src="js/jquery.js"></script>
         <script src="js/script.js"></script>
         <script src="js/all.min.js"></script>
+        
         <?php
 class Fruit {
     // Properties
     public $name;
-    public $color;
+    public $keko;
 
     // Methods
-    function set_name($name) {
-        $this->name = $name;
+    function __construct($namer,$koka) {
+        $this->name = $namer;
+        $this->keko = $koka;
     }
-    function get_name() {
-        return $this->name;
+    public function intro() {
+        echo "The Fruit is {$this->name} and The Color is {$this->keko}.";
+        echo "<br>";
     }
+}
+// Inheritance Class (dervied)
+class kika extends Fruit {
+    public $weight;
+    public function __construct($namer, $koka, $weight) {
+        $this->name = $namer;
+        $this->keko = $koka;
+        $this->weight = $weight;
+        echo "Am I a fruit or a Kika? ";
     }
+    public function intro() {
+        echo "The fruit is {$this->name}, the color is {$this->keko}, and the weight is {$this->weight} gram.";
+    }
+}
+$kika= new kika("kika", "black",50);
+$kika->intro();
 
-    $apple = new Fruit();
-    $banana = new Fruit();
-    $apple->set_name('Apple');
-    $banana->set_name('Banana');
-
-    echo $apple->get_name();
-    echo "<br>";
-    echo $banana->get_name();
 ?>
 </body>
 </html>
